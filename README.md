@@ -76,9 +76,9 @@ This specialization means each task gets expert-level attention, resulting in hi
 
 ## Setup:
 ## Create a virtual environment first:
-``` bash python -m venv ven ```
+``` python -m venv ven ```
 ## Activate the venv 
-```bash ./venv/Scripts/activate```
+``` ./venv/Scripts/activate```
 ## Install the dependicies
 ``` pip install -r requirements.txt```
 ## Setup you API Keys in the .env file
