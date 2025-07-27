@@ -74,6 +74,17 @@ This specialization means each task gets expert-level attention, resulting in hi
 - Function: Provides access to current career data and remembers user interactions
 - Benefits: Always up-to-date information, personalized context, reduced AI hallucination
 
+## Setup:
+**Create a virtual environment first:**
+``` python -m venv ven ```
+**Activate the venv**
+```./venv/Scripts/activate```
+**Install the dependicies**
+``` pip install -r requirements.txt```
+** Setup you API Keys in the .env file**
+**Run the app.py**
+``` streamlit run app.py```
+
 ## Technical Stack
 
 ### AI Frameworks and Models
@@ -148,4 +159,5 @@ RAG System (Knowledge Enhancement) → CrewAI (Professional Email) → User
 - **Current Information:** Access to up-to-date career data beyond AI training cutoffs
 - **Personalization:** Remembers user career journey and preferences
 - **Context Awareness:** Provides relevant information for more targeted responses
+
 
