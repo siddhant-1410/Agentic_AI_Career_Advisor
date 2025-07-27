@@ -23,7 +23,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for better styling
+
 st.markdown("""
 <style>
     .main-header {
@@ -134,47 +134,7 @@ def display_env_setup_instructions():
     To get started, you need to set up your API keys in a `.env` file:
     """)
     
-    st.code("""
-# Create a .env file in your project directory with:
-MISTRAL_API_KEY=your_mistral_api_key_here
-SERPAPI_API_KEY=your_serpapi_key_here # Optional for enhanced search
 
-# Email configuration (for sending reports)
-SENDER_EMAIL=your_email@gmail.com
-SENDER_PASSWORD=your_app_password
-SMTP_SERVER=smtp.gmail.com
-SMTP_PORT=587
-    """, language="bash")
-    
-    st.markdown("""
-    ### How to get your API keys:
-    
-    **🔑 Mistral API Key (Required):**
-    1. Visit [Mistral AI Console](https://console.mistral.ai/)
-    2. Sign up for an account (phone verification required)
-    3. Navigate to API Keys section
-    4. Create a new API key
-    5. Copy your API key
-    
-    **Features:**
-    - ✅ 1,000,000,000 tokens/month free tier
-    - ✅ 1 request/second, 500,000 tokens/minute
-    - ✅ High-quality responses comparable to premium models
-    - ✅ No strict usage quotas like other services
-    
-    **🔍 SerpAPI Key (Optional - for enhanced search):**
-    1. Visit [SerpAPI](https://serpapi.com/)
-    2. Sign up for a free account
-    3. Copy your API key from the dashboard
-    
-    **📧 Email Configuration (Optional - for sending reports):**
-    1. Use Gmail with App Password (recommended)
-    2. Enable 2-Factor Authentication on your Google account
-    3. Generate an App Password for "Mail"
-    4. Use the App Password in SENDER_PASSWORD
-    
-    **Note:** After setting up the `.env` file, restart the application for the changes to take effect.
-    """)
     
     st.info("💡 The system works excellently with just the Mistral API key, providing unlimited usage within the generous free tier limits.")
 
@@ -244,30 +204,7 @@ def display_email_interface(career_data):
                     except Exception as e:
                         st.error(f"❌ Unexpected error: {str(e)}")
     
-    # Email configuration help
-    with st.expander("⚙️ Email Configuration Help"):
-        st.markdown("""
-        **Setting up email functionality:**
-        
-        Add these environment variables to your `.env` file:
-        ```
-        SENDER_EMAIL=your_email@gmail.com
-        SENDER_PASSWORD=your_app_password
-        SMTP_SERVER=smtp.gmail.com
-        SMTP_PORT=587
-        ```
-        
-        **For Gmail users:**
-        1. Enable 2-Factor Authentication
-        2. Generate an App Password (not your regular password)
-        3. Use the App Password in SENDER_PASSWORD
-        
-        **Supported email providers:**
-        - Gmail (smtp.gmail.com:587)
-        - Outlook (smtp-mail.outlook.com:587)
-        - Yahoo (smtp.mail.yahoo.com:587)
-        """)
-
+    
 # Dynamic visualization functions
 def generate_dynamic_industry_trends(career_data):
     """Generate dynamic industry trends based on career data"""

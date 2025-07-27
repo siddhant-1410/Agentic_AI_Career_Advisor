@@ -115,7 +115,7 @@ class CareerGuidanceSystem:
                 result = response.json()
                 return result["choices"][0]["message"]["content"]
             elif response.status_code == 429:
-                # Rate limit hit, wait and retry once
+
                 time.sleep(5)
                 response = requests.post(
                     self.mistral_base_url,
@@ -136,14 +136,14 @@ class CareerGuidanceSystem:
     
     def search_with_cache(self, query, cache_key, ttl_hours=24, max_retries=3):
         """Perform a search with caching to avoid redundant API calls"""
-        # Check cache first
+      
         if cache_key in self.search_cache:
             timestamp = self.search_cache[cache_key]['timestamp']
             age_hours = (datetime.now() - timestamp).total_seconds() / 3600
             if age_hours < ttl_hours:
                 return self.search_cache[cache_key]['data']
         
-        # Use Mistral to generate comprehensive response
+       
         retry_count = 0
         last_error = None
         
@@ -168,7 +168,7 @@ class CareerGuidanceSystem:
                         'data': result,
                         'timestamp': datetime.now()
                     }
-                    time.sleep(1)  # Rate limiting
+                    time.sleep(1) 
                     return result
                 else:
                     last_error = result

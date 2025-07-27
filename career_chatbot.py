@@ -149,7 +149,7 @@ def display_chat_interface(career_data=None, career_system=None):
     if 'chat_messages' not in st.session_state:
         st.session_state.chat_messages = []
     
-    # Add welcome message
+   
     if not st.session_state.chat_messages:
         if career_data:
             career_name = career_data.get('career_name', 'your selected career')
@@ -170,7 +170,7 @@ Feel free to ask me anything!"""
         
         st.session_state.chat_messages.append({"role": "assistant", "content": welcome_msg})
     
-    # Display chat messages in a container with custom styling
+  
     chat_container = st.container()
     with chat_container:
         for i, message in enumerate(st.session_state.chat_messages):
@@ -182,28 +182,28 @@ Feel free to ask me anything!"""
         # Add user message
         st.session_state.chat_messages.append({"role": "user", "content": prompt})
         
-        # Display user message immediately
+        
         with chat_container:
             with st.chat_message("user"):
                 st.markdown(prompt)
         
-        # Generate assistant response
+       
         with st.chat_message("assistant"):
             with st.spinner("🤔 Thinking..."):
                 response = st.session_state.chat_assistant.process_question(prompt, career_data)
             
-            # Stream the response for better UX
+           
             response_placeholder = st.empty()
             response_placeholder.markdown(response)
         
-        # Add assistant response to messages
+       
         st.session_state.chat_messages.append({"role": "assistant", "content": response})
         
-        # Auto-scroll by rerunning (optional)
+        
         if len(st.session_state.chat_messages) > 20:
             st.session_state.chat_messages = st.session_state.chat_messages[-20:]
     
-    # Chat controls
+   
     col1, col2, col3 = st.columns([1, 1, 1])
     
     with col1:
@@ -224,7 +224,6 @@ Feel free to ask me anything!"""
                 st.session_state.current_step = 'career_selection'
                 st.rerun()
     
-    # Chat tips and suggestions
     with st.expander("💡 Chat Tips & Example Questions"):
         st.markdown("""
         **💬 How to get the best responses:**
@@ -289,16 +288,16 @@ Feel free to ask me anything!"""
             st.session_state.show_email_interface = True
             st.rerun()
 
-    # Add email interface toggle
+    
     if hasattr(st.session_state, 'show_email_interface') and st.session_state.show_email_interface:
         st.markdown("---")
         from email_crew import CareerEmailCrew
         
-        # Initialize email crew if not exists
+       
         if 'email_crew' not in st.session_state:
             st.session_state.email_crew = CareerEmailCrew()
         
-        # Display email interface inline
+        
         st.markdown("### 📧 Email Career Report")
         
         with st.form("chat_email_form"):

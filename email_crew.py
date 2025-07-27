@@ -43,7 +43,6 @@ class EmailTool(BaseTool):
             # Convert markdown to HTML
             html_content = markdown.markdown(content, extensions=['tables', 'fenced_code'])
             
-            # Add some basic styling
             html_styled = f"""
             <html>
             <head>
@@ -74,7 +73,7 @@ class EmailTool(BaseTool):
             </html>
             """
             
-            # Attach HTML content
+            
             html_part = MIMEText(html_styled, 'html')
             msg.attach(html_part)
             
