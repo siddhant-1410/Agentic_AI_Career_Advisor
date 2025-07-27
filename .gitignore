@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 #virtual environments
-acia/
+aica/
 
 # Distribution / packaging
 .Python
