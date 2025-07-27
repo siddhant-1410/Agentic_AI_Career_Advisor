@@ -75,14 +75,14 @@ This specialization means each task gets expert-level attention, resulting in hi
 - Benefits: Always up-to-date information, personalized context, reduced AI hallucination
 
 ## Setup:
-**Create a virtual environment first:**
-``` python -m venv ven ```
-**Activate the venv**
-```./venv/Scripts/activate```
-**Install the dependicies**
+## Create a virtual environment first:
+``` bash python -m venv ven ```
+## Activate the venv 
+```bash ./venv/Scripts/activate```
+## Install the dependicies
 ``` pip install -r requirements.txt```
-** Setup you API Keys in the .env file**
-**Run the app.py**
+## Setup you API Keys in the .env file
+## Run the app.py
 ``` streamlit run app.py```
 
 ## Technical Stack
