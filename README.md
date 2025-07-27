@@ -1,3 +1,11 @@
+## Demo Video (The Deployed link provied may not work due to being uploaded on Render's Free Tier so Check out the demo video instead ):
+
+
+
+
+https://github.com/user-attachments/assets/715746a2-590c-4806-9ba8-955beced85e9
+
+
 # AI Career Guidance System
 
 A sophisticated multi-agent AI system that provides personalized career guidance, analysis, and professional email reporting. This project demonstrates the power of collaborative AI agents working together to deliver comprehensive career counseling services.
