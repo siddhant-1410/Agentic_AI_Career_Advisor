@@ -1,3 +1,11 @@
+## Demo Video (The Deployed link provied may not work due to being uploaded on Render's Free Tier so Check out the demo video instead ):
+
+
+
+
+https://github.com/user-attachments/assets/715746a2-590c-4806-9ba8-955beced85e9
+
+
 # AI Career Guidance System
 
 A sophisticated multi-agent AI system that provides personalized career guidance, analysis, and professional email reporting. This project demonstrates the power of collaborative AI agents working together to deliver comprehensive career counseling services.
@@ -74,6 +82,17 @@ This specialization means each task gets expert-level attention, resulting in hi
 - Function: Provides access to current career data and remembers user interactions
 - Benefits: Always up-to-date information, personalized context, reduced AI hallucination
 
+## Setup:
+## Create a virtual environment first:
+``` python -m venv ven ```
+## Activate the venv 
+``` ./venv/Scripts/activate```
+## Install the dependicies
+``` pip install -r requirements.txt```
+## Setup you API Keys in the .env file
+## Run the app.py
+``` streamlit run app.py```
+
 ## Technical Stack
 
 ### AI Frameworks and Models
@@ -148,4 +167,5 @@ RAG System (Knowledge Enhancement) → CrewAI (Professional Email) → User
 - **Current Information:** Access to up-to-date career data beyond AI training cutoffs
 - **Personalization:** Remembers user career journey and preferences
 - **Context Awareness:** Provides relevant information for more targeted responses
+
 
