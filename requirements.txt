@@ -1,28 +1,18 @@
-# Core dependencies
 streamlit>=1.28.0
 pandas>=1.5.0
 numpy>=1.24.0
 plotly>=5.15.0
-
-# Google Gemini AI dependencies
+python-dotenv>=1.0.0
+requests>=2.31.0
 google-generativeai>=0.3.0
 langchain-google-genai>=1.0.0
-
-# LangChain dependencies
 langchain>=0.1.0
 langchain-community>=0.0.10
 faiss-cpu>=1.7.4
-
-# Search capabilities (optional)
 google-search-results>=2.4.2
-
-# Environment management
-python-dotenv>=1.0.0
-
-# Additional utilities
-requests>=2.31.0
 urllib3>=2.0.0
 
-crewai==0.28.8
-crewai-tools==0.1.6
-# markdown==3.5.2
+# Use compatible CrewAI version for Python 3.11
+crewai>=0.30.11
+crewai-tools>=0.1.6
+markdown>=3.5.0
